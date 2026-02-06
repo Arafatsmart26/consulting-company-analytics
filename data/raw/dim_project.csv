@@ -1,0 +1,46 @@
+project_id,client_id,project_name,contract_type,start_date,end_date,project_manager_id,budget_hours,budget_value_dkk,planned_margin_pct
+1,5,Fundamental demand-driven secured line Project,T&M,2023-01-10,2023-03-06,10,1569,1302091,0.242
+2,9,Front-line empowering infrastructure Program,T&M,2023-01-15,2023-07-12,10,1191,898945,0.219
+3,2,Synchronized secondary framework Initiative,Fixed,2023-02-08,2023-09-15,40,737,659405,0.349
+4,18,Intuitive web-enabled archive Initiative,Fixed,2023-02-14,2023-05-26,12,781,623415,0.26
+5,18,Persevering regional open system Program,Fixed,2023-02-19,2023-09-10,12,850,637865,0.342
+6,3,Compatible national data-warehouse Program,Fixed,2023-02-20,2023-04-02,33,906,799447,0.213
+7,9,De-engineered grid-enabled architecture Project,Fixed,2023-03-02,2023-07-20,27,270,226872,0.284
+8,17,Multi-layered executive complexity Program,Fixed,2023-03-13,2023-09-09,35,485,435450,0.268
+9,8,Quality-focused tertiary framework Transformation,Fixed,2023-03-17,2023-07-11,41,431,329206,0.249
+10,5,Synchronized neutral framework Transformation,T&M,2023-04-07,2023-07-15,12,1130,1002988,0.218
+11,13,Devolved empowering budgetary management Project,Fixed,2023-04-09,2023-09-08,27,651,476059,0.222
+12,11,User-friendly neutral collaboration Program,Fixed,2023-04-25,2023-08-25,10,1297,1088754,0.291
+13,7,Horizontal real-time database Project,T&M,2023-04-30,2023-07-14,12,547,393294,0.203
+14,21,Expanded systemic productivity Program,Fixed,2023-05-14,2023-08-18,33,462,349357,0.322
+15,22,Profit-focused mobile extranet Initiative,T&M,2023-06-04,2023-09-01,30,1409,1153608,0.182
+16,1,Cross-group scalable interface Program,T&M,2023-06-10,2024-01-24,24,539,398302,0.167
+17,18,Balanced 24hour groupware Transformation,T&M,2023-06-11,2023-07-13,21,1178,989048,0.177
+18,12,Sharable empowering complexity Program,T&M,2023-06-12,2023-08-09,28,605,459747,0.227
+19,22,Reactive tertiary interface Transformation,T&M,2023-07-15,2023-10-01,40,666,504079,0.241
+20,16,Customizable asynchronous solution Transformation,Fixed,2023-07-23,2023-12-03,29,1383,1210945,0.274
+21,16,Quality-focused 5thgeneration hub Program,Fixed,2023-08-17,2024-04-29,16,770,628905,0.238
+22,16,Optional clear-thinking analyzer Initiative,T&M,2023-08-18,2024-02-19,32,384,296729,0.192
+23,2,Multi-lateral 6thgeneration help-desk Initiative,Fixed,2023-08-19,2023-10-17,44,1095,787816,0.235
+24,1,Synergized dynamic secured line Initiative,T&M,2023-09-11,2024-04-26,24,1661,1387219,0.216
+25,15,Multi-channeled zero-defect open architecture Program,Fixed,2023-10-16,2024-02-14,10,1373,1123504,0.244
+26,25,Secured value-added collaboration Transformation,Fixed,2023-10-17,2024-04-22,10,912,669230,0.32
+27,2,Diverse context-sensitive installation Project,T&M,2023-10-24,2023-11-30,29,1084,785028,0.194
+28,8,Enhanced user-facing groupware Project,T&M,2023-10-24,2023-12-01,32,458,408791,0.155
+29,18,Synchronized user-facing workforce Program,Fixed,2023-11-07,2024-06-01,40,429,381296,0.25
+30,23,Future-proofed cohesive toolset Project,Fixed,2023-11-19,2024-01-15,10,291,204295,0.202
+31,4,Multi-tiered 5thgeneration leverage Transformation,T&M,2023-11-30,2024-03-30,44,1188,964307,0.155
+32,19,Exclusive logistical hardware Program,T&M,2023-12-03,2024-04-05,12,1391,1079128,0.215
+33,7,Focused directional algorithm Initiative,T&M,2023-12-15,2024-02-11,28,863,652293,0.231
+34,3,Open-architected full-range focus group Transformation,Fixed,2023-12-19,2024-04-25,44,254,194667,0.263
+35,13,Visionary even-keeled hardware Initiative,T&M,2023-12-21,2024-06-25,10,1109,831082,0.169
+36,14,Synergistic national groupware Transformation,Fixed,2024-01-23,2024-06-30,35,874,765242,0.259
+37,21,Customizable empowering conglomeration Transformation,Fixed,2024-01-24,2024-04-20,32,525,455853,0.272
+38,23,Automated bi-directional policy Program,T&M,2024-02-19,2024-06-30,28,927,693749,0.227
+39,15,Monitored upward-trending toolset Program,T&M,2024-02-23,2024-06-30,12,684,545820,0.174
+40,11,Optional real-time migration Transformation,T&M,2024-03-22,2024-06-30,28,315,221899,0.159
+41,18,Networked object-oriented core Initiative,T&M,2024-04-09,2024-06-30,27,1746,1408369,0.17
+42,19,Balanced tertiary Internet solution Transformation,Fixed,2024-04-27,2024-06-30,17,1010,767858,0.339
+43,12,Programmable national software Project,T&M,2024-04-30,2024-06-30,32,859,614698,0.155
+44,18,Multi-lateral intermediate architecture Transformation,Fixed,2024-05-02,2024-06-30,41,246,209270,0.283
+45,12,Secured foreground protocol Transformation,T&M,2024-05-10,2024-06-30,10,624,469111,0.223

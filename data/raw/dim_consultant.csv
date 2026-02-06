@@ -1,0 +1,46 @@
+consultant_id,full_name,level,role,country,hire_date,cost_rate_dkk_per_hour
+1,Ron Svendsen,Junior,Engineer,Sweden,2022-05-17,450
+2,Noah Rhodes,Consultant,Engineer,Denmark,2021-06-28,650
+3,Josefine Andersen-Pedersen,Lead,Engineer,Denmark,2021-07-11,1200
+4,Frank Bech,Consultant,Engineer,Denmark,2022-02-12,650
+5,Ditte Schultz,Lead,Engineer,UK,2022-07-24,1200
+6,Inger Friberg,Junior,Engineer,UK,2022-11-28,450
+7,Dr. Poul Søndergaard,Senior,Engineer,Norway,2022-11-21,900
+8,Jonas Engen,Junior,Engineer,UK,2021-07-18,450
+9,Frode Jensen,Senior,Analyst,Sweden,2021-03-30,900
+10,Stine Østergaard,Lead,PM,Denmark,2023-02-15,1200
+11,Solveig Kristiansen,Junior,PM,Sweden,2023-01-11,450
+12,Berit Brandt,Consultant,PM,Denmark,2021-04-04,650
+13,Liv Jacobsen-Nguyen,Consultant,Analyst,Denmark,2022-04-22,650
+14,Amber Perez,Junior,Analyst,Sweden,2023-07-18,450
+15,Morten Bakken,Senior,Engineer,Sweden,2022-12-29,900
+16,Ingrid Pettersson Börjesson,Consultant,PM,Sweden,2021-05-27,650
+17,Monica Halvorsen,Consultant,PM,Norway,2021-12-01,650
+18,Minna Jacobsen-Mathiesen,Lead,Analyst,Sweden,2022-03-26,1200
+19,James Mayo,Senior,Engineer,Norway,2021-03-07,900
+20,Sarah Parsons,Senior,Analyst,Sweden,2021-05-16,900
+21,Renee Morales,Consultant,PM,Sweden,2022-03-12,650
+22,Yngve Toft,Lead,Analyst,UK,2021-10-20,1200
+23,Martine Lunde,Senior,Engineer,Norway,2022-06-23,900
+24,Börje Blomgren,Lead,PM,UK,2023-01-12,1200
+25,Linda-Ragnhild Johansen,Consultant,Engineer,UK,2021-07-06,650
+26,Joakim Madsen,Junior,Engineer,Norway,2021-11-24,450
+27,Maria Sandberg,Lead,PM,Denmark,2023-02-28,1200
+28,Rebecca Henderson,Lead,PM,UK,2023-12-20,1200
+29,Jacobine Holst,Senior,PM,Denmark,2021-08-23,900
+30,Erik Larsson,Senior,PM,Sweden,2021-08-17,900
+31,Hr Pete Mathiesen,Senior,Analyst,Norway,2023-07-19,900
+32,Thomas Berge-Haugen,Junior,PM,Sweden,2023-10-23,450
+33,Ingrid Vallin,Consultant,PM,Denmark,2022-09-04,650
+34,Vidar-Fredrik Lund,Consultant,Engineer,Sweden,2021-11-27,650
+35,Prof. Stina Overgaard,Junior,PM,Sweden,2023-09-28,450
+36,Phillip Ryan,Junior,Engineer,Sweden,2022-09-22,450
+37,Hanne Steffensen-Hansen,Consultant,Engineer,Norway,2021-06-11,650
+38,Tanja Mogensen,Junior,PM,UK,2021-05-22,450
+39,Shawn Arroyo,Consultant,Engineer,UK,2021-12-05,650
+40,Univ.Prof. Sine Rasmussen,Senior,PM,UK,2022-03-10,900
+41,John Pierce,Consultant,PM,Sweden,2023-03-29,650
+42,Simen-Magnus Engen,Senior,Analyst,UK,2021-09-05,900
+43,Jennifer Powers,Consultant,Engineer,Denmark,2022-11-24,650
+44,Heidi Kristensen,Junior,PM,Norway,2022-03-28,450
+45,Finn Rasmussen,Junior,Engineer,Denmark,2022-04-14,450

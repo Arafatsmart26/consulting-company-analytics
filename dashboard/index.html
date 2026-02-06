@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consulting Company Analytics Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#f0fdf4', 100: '#dcfce7', 200: '#bbf7d0', 300: '#86efac', 400: '#4ade80',
+              500: '#22c55e', 600: '#16a34a', 700: '#15803d', 800: '#166534', 900: '#14532d',
+            },
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: Inter, system-ui, sans-serif; }
+    .glass-card { background: rgba(255,255,255,0.85); backdrop-filter: blur(12px); border-radius: 0.75rem; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+    .kpi-card { background: rgba(255,255,255,0.85); backdrop-filter: blur(12px); border-radius: 0.75rem; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); padding: 1.25rem; display: flex; flex-direction: column; justify-content: center; }
+    .dashboard-bg { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23d1fae5' fill-opacity='0.3' d='M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E"); background-size: cover; background-position: bottom; }
+  </style>
+</head>
+<body class="font-sans antialiased dashboard-bg">
+  <div class="min-h-screen p-6 lg:p-8">
+    <!-- Header -->
+    <header class="mb-8">
+      <h1 class="text-2xl lg:text-3xl font-bold text-primary-800">
+        Consulting Company Analytics Dashboard
+      </h1>
+      <p class="text-gray-600 mt-1">Executive overview</p>
+    </header>
+
+    <!-- Top row: Volcano + KPIs -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-6">
+      <!-- Money Volcano -->
+      <div class="lg:col-span-5 glass-card overflow-hidden flex items-end justify-center p-4 min-h-[280px]">
+        <div class="relative w-full max-w-xs mx-auto">
+          <svg viewBox="0 0 280 220" class="w-full h-auto" aria-hidden="true">
+            <!-- Sky gradient -->
+            <defs>
+              <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#93c5fd" />
+                <stop offset="100%" style="stop-color:#e0f2fe" />
+              </linearGradient>
+              <linearGradient id="volcano" x1="0%" y1="100%" x2="0%" y2="0%">
+                <stop offset="0%" style="stop-color:#57534e" />
+                <stop offset="60%" style="stop-color:#78716c" />
+                <stop offset="100%" style="stop-color:#a8a29e" />
+              </linearGradient>
+              <radialGradient id="lavaGlow" cx="50%" cy="30%" r="50%">
+                <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:0.9" />
+                <stop offset="70%" style="stop-color:#f59e0b;stop-opacity:0.5" />
+                <stop offset="100%" style="stop-color:#dc2626;stop-opacity:0" />
+              </radialGradient>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+                <feMerge>
+                  <feMergeNode in="coloredBlur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+            <!-- Ground/sky -->
+            <rect width="280" height="220" fill="url(#sky)" />
+            <!-- Volcano body -->
+            <path d="M 40 220 L 90 120 L 140 80 L 190 120 L 240 220 Z" fill="url(#volcano)" stroke="#44403c" stroke-width="1" />
+            <!-- Lava glow at crater -->
+            <ellipse cx="140" cy="85" rx="35" ry="25" fill="url(#lavaGlow)" filter="url(#glow)" />
+            <!-- Dollar bills (simplified rectangles) -->
+            <g fill="none" stroke="#16a34a" stroke-width="2">
+              <rect x="115" y="45" width="22" height="12" rx="1" transform="rotate(-15 126 51)" />
+              <rect x="145" y="35" width="22" height="12" rx="1" transform="rotate(10 156 41)" />
+              <rect x="130" y="25" width="20" height="11" rx="1" transform="rotate(-5 140 30)" />
+              <rect x="165" y="55" width="18" height="10" rx="1" transform="rotate(20 174 60)" />
+              <rect x="100" y="60" width="20" height="11" rx="1" transform="rotate(-25 110 65)" />
+            </g>
+            <!-- $ symbol hints on bills -->
+            <text x="121" y="54" font-size="8" fill="#16a34a" font-weight="bold" transform="rotate(-15 126 51)">$</text>
+            <text x="152" y="43" font-size="8" fill="#16a34a" font-weight="bold" transform="rotate(10 156 41)">$</text>
+          </svg>
+          <p class="text-center text-sm font-medium text-primary-700 mt-2">Penge Vulkan</p>
+        </div>
+      </div>
+
+      <!-- Executive KPIs -->
+      <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="kpi-card">
+          <span class="text-sm text-gray-500 uppercase tracking-wide">Utilization</span>
+          <span class="text-3xl font-bold text-primary-700 mt-1">78.5%</span>
+        </div>
+        <div class="kpi-card">
+          <span class="text-sm text-gray-500 uppercase tracking-wide">Bench Rate</span>
+          <span class="text-3xl font-bold text-primary-700 mt-1">11.6%</span>
+        </div>
+        <div class="kpi-card">
+          <span class="text-sm text-gray-500 uppercase tracking-wide">Revenue</span>
+          <span class="text-3xl font-bold text-primary-700 mt-1">$1.3M</span>
+        </div>
+        <div class="kpi-card sm:col-span-2 lg:col-span-2">
+          <span class="text-sm text-gray-500 uppercase tracking-wide">Overrun</span>
+          <span class="text-2xl font-bold text-primary-700 mt-1">7 At-Risk Projects</span>
+        </div>
+        <div class="kpi-card">
+          <span class="text-sm text-gray-500 uppercase tracking-wide">Margin</span>
+          <span class="text-2xl font-bold text-primary-700 mt-1">19.4%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second row: Monthly Utilization chart + Risk Overview -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+      <!-- Monthly Utilization Overview (large) -->
+      <div class="lg:col-span-2 glass-card p-6">
+        <h2 class="text-lg font-semibold text-primary-800 mb-4">Monthly Utilization Overview</h2>
+        <div class="h-64">
+          <canvas id="chartUtilization"></canvas>
+        </div>
+        <p class="text-sm text-primary-600 mt-2">↑ 7.2% vs prior period</p>
+      </div>
+
+      <!-- Risk Overview -->
+      <div class="glass-card p-6">
+        <h2 class="text-lg font-semibold text-primary-800 mb-4">Risk Overview</h2>
+        <p class="text-2xl font-bold text-primary-700 mb-3">7 At-Risk Projects</p>
+        <ul class="space-y-2 text-sm text-gray-700 mb-4">
+          <li>Project #100 · Denmark · $130K</li>
+          <li>Project #104 · Norway · $56K</li>
+          <li>Project #136 · Fixed Fee · $146K</li>
+          <li>Project #112 · UK · $89K</li>
+        </ul>
+        <div class="h-40 flex items-center justify-center">
+          <canvas id="chartRisk"></canvas>
+        </div>
+        <div class="flex justify-between text-xs mt-2 text-gray-600">
+          <span>Fixed Fee $467K</span>
+          <span>Time & Mat $467K</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Financial Overview table -->
+    <div class="glass-card p-6 overflow-x-auto">
+      <h2 class="text-lg font-semibold text-primary-800 mb-4">Financial Overview by Billing Type & Country</h2>
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="border-b border-primary-200 text-left text-gray-600">
+            <th class="pb-3 pr-4">Billing Type</th>
+            <th class="pb-3 pr-4">Country</th>
+            <th class="pb-3 pr-4">Margin %</th>
+            <th class="pb-3 pr-4">Overrun %</th>
+            <th class="pb-3 pr-4">Cost</th>
+            <th class="pb-3 pr-4">Rev</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-700">
+          <tr class="border-b border-primary-100">
+            <td class="py-2 pr-4">Fixed Fee</td>
+            <td class="py-2 pr-4">Denmark</td>
+            <td class="py-2 pr-4">19.4%</td>
+            <td class="py-2 pr-4">56.7%</td>
+            <td class="py-2 pr-4">$20.5M</td>
+            <td class="py-2 pr-4">$24.5M</td>
+          </tr>
+          <tr class="border-b border-primary-100">
+            <td class="py-2 pr-4">Fixed Fee</td>
+            <td class="py-2 pr-4">UK</td>
+            <td class="py-2 pr-4">50.5%</td>
+            <td class="py-2 pr-4">50.6%</td>
+            <td class="py-2 pr-4">$10.0M</td>
+            <td class="py-2 pr-4">$15.0M</td>
+          </tr>
+          <tr class="border-b border-primary-100">
+            <td class="py-2 pr-4">Time & Mat</td>
+            <td class="py-2 pr-4">Norway</td>
+            <td class="py-2 pr-4">16.8%</td>
+            <td class="py-2 pr-4">83.1%</td>
+            <td class="py-2 pr-4">$5.0M</td>
+            <td class="py-2 pr-4">$6.0M</td>
+          </tr>
+          <tr>
+            <td class="py-2 pr-4">Time & Mat</td>
+            <td class="py-2 pr-4">Denmark</td>
+            <td class="py-2 pr-4">22.1%</td>
+            <td class="py-2 pr-4">12.3%</td>
+            <td class="py-2 pr-4">$18.2M</td>
+            <td class="py-2 pr-4">$23.4M</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    // Monthly Utilization - Bar + Line
+    const utilCtx = document.getElementById("chartUtilization").getContext("2d");
+    const months = ["May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const utilizationBars = [42, 48, 52, 58, 62, 68, 72, 78];
+    const trendLine = [42, 46, 52, 56, 62, 66, 72, 78];
+
+    new Chart(utilCtx, {
+      type: "bar",
+      data: {
+        labels: months,
+        datasets: [
+          {
+            label: "Utilization %",
+            data: utilizationBars,
+            backgroundColor: ["#86efac", "#4ade80", "#22c55e", "#16a34a", "#15803d", "#166534", "#14532d", "#22c55e"].map((c, i) => c),
+            borderRadius: 6,
+            yAxisID: "y",
+          },
+          {
+            label: "Trend",
+            data: trendLine,
+            type: "line",
+            borderColor: "#14532d",
+            borderWidth: 2,
+            fill: false,
+            tension: 0.3,
+            pointRadius: 4,
+            yAxisID: "y",
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          y: {
+            min: 30,
+            max: 80,
+            ticks: { stepSize: 10 },
+            grid: { color: "rgba(0,0,0,0.06)" },
+          },
+          x: {
+            grid: { display: false },
+          },
+        },
+        plugins: {
+          legend: { display: true, position: "top" },
+        },
+      },
+    });
+
+    // Risk doughnut - Fixed Fee vs Time & Mat
+    const riskCtx = document.getElementById("chartRisk").getContext("2d");
+    new Chart(riskCtx, {
+      type: "doughnut",
+      data: {
+        labels: ["Fixed Fee", "Time & Mat"],
+        datasets: [{
+          data: [50, 50],
+          backgroundColor: ["#14532d", "#86efac"],
+          borderWidth: 0,
+        }],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        cutout: "60%",
+        plugins: {
+          legend: { position: "bottom" },
+        },
+      },
+    });
+  </script>
+</body>
+</html>
