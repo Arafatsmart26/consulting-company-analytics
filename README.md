@@ -5,7 +5,7 @@ Made it as a simpel project, used ai for bug fixes and dashboard inspired by htt
 Dansk:
 Salgsprogram der er lavet med Python, SQL, and Power BI hjælp af ai og dashboardet er inspireret af  https://github.com/TailAdmin/tailadmin-free-tailwind-dashboard-template
 
-If you have problems with runing the dashboard try these steps:
+If you have problems with runing the dashboard try these steps on the terminal:
 
 0. Root of the folder \consulting-company-analytics>
 1. cd dashboard
