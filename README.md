@@ -1,6 +1,7 @@
 # consulting-company-analytics
 Simple Sales Analysis Using Python, SQL, and Power BI
 Made it as a simpel project, used ai for bug fixes and dashboard inspired by https://github.com/TailAdmin/tailadmin-free-tailwind-dashboard-template
+Take a look at the notebook first.
 
 Dansk:
 Salgsprogram der er lavet med Python, SQL, and Power BI hjælp af ai og dashboardet er inspireret af  https://github.com/TailAdmin/tailadmin-free-tailwind-dashboard-template
